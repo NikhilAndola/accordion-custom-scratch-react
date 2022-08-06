@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 import Chevron from './Chevron';
 
 import './Accordion.css';
@@ -39,5 +40,15 @@ function Accordion(props) {
     </div>
   );
 }
+
+Accordion.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+};
+
+Accordion.defaultProps = {
+  title: 'default title',
+  content: 'asdflkjd fsdlf sljd',
+};
 
 export default Accordion;
